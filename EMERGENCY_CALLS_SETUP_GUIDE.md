@@ -19,12 +19,12 @@ Your Twilio emergency call system is now **RUNNING** and ready to use!
 When we tested the emergency endpoint:
 
 ```
-✅ Hospital 1 (+919482936725):
+✅ Hospital 1 (+YOUR_HOSPITAL_PHONE_NUMBER):
    - Call SID: CA1753b57bc46b10e88ad5a16725fcd77f
    - SMS SID: SM46ca0aea63393c2a5d041ca0e6805ea4
    - Status: SUCCESS! 🎉
 
-⚠️  Ambulance numbers (+919740417391):
+⚠️  Ambulance numbers (+YOUR_AMBULANCE_PHONE_NUMBER):
    - Status: Unverified (Twilio trial account limitation)
    - Solution: Verify numbers in Twilio Console (see below)
 ```
@@ -39,7 +39,7 @@ Since you're using a Twilio trial account, you need to verify the ambulance numb
 
 1. Go to: https://console.twilio.com/us1/develop/phone-numbers/manage/verified
 2. Click **"Add a new number"**
-3. Enter: `+919740417391`
+3. Enter: `+1234567890`
 4. Twilio will send a verification code to that number
 5. Enter the code to verify
 
@@ -69,10 +69,10 @@ You should see:
 🚑 ========================================
 
 📱 Configured contacts:
-  Twilio Number: +18585332666
-  Ambulance 1: +919740417391
-  Ambulance 2: +919740417391
-  Hospital 1: +919482936725
+  Twilio Number: +1234567890
+  Ambulance 1: +9876543210
+  Ambulance 2: +9876543210
+  Hospital 1: +1234567890
 
 ✅ Ready to handle emergencies!
 ```
@@ -95,9 +95,9 @@ You should see:
 2. **Creates incident in Firestore** (database)
 3. **Calls Twilio server** (`http://localhost:3000/emergency-alert`)
 4. **Server makes calls to**:
-    - Ambulance 1: `+919740417391` (needs verification)
-    - Ambulance 2: `+919740417391` (same number, needs verification)
-    - Hospital 1: `+919482936725` ✅ **WORKING!**
+    - Ambulance 1: `+YOUR_AMBULANCE_PHONE_NUMBER` (needs verification)
+    - Ambulance 2: `+YOUR_AMBULANCE_PHONE_NUMBER` (same number, needs verification)
+    - Hospital 1: `+YOUR_HOSPITAL_PHONE_NUMBER` ✅ **WORKING!**
 5. **Each contact receives**:
     - 📞 **Voice call** with emergency alert message
     - 📱 **SMS backup** with location details
@@ -110,7 +110,7 @@ You can test the server directly without the app:
 
 ```powershell
 $body = @{
-    patientPhone = "+919482936725"
+    patientPhone = "+1234567890"
     patientName = "Test Patient"
     latitude = 12.9716
     longitude = 77.5946
@@ -130,13 +130,13 @@ Invoke-RestMethod -Method Post -Uri "http://localhost:3000/emergency-alert" -Bod
 Update these in `twilio-serverless/.env`:
 
 ```env
-ACCOUNT_SID=AC93c01dd30d2d03abb133b938e6e16e79
-AUTH_TOKEN=ab5e0817d82cbad57d5724acb7fdfd67
+ACCOUNT_SID=YOUR_ACCOUNT_SID
+AUTH_TOKEN=YOUR_AUTH_TOKEN
 
-TWILIO_PHONE_NUMBER=+18585332666
-AMBULANCE_1_PHONE=+919740417391
-AMBULANCE_2_PHONE=+919740417391
-HOSPITAL_1_PHONE=+919482936725
+TWILIO_PHONE_NUMBER=+1234567890
+AMBULANCE_1_PHONE=+9876543210
+AMBULANCE_2_PHONE=+9876543210
+HOSPITAL_1_PHONE=+1234567890
 ```
 
 After editing `.env`, restart the server:
@@ -188,11 +188,11 @@ https://console.twilio.com/us1/develop/phone-numbers/manage/verified
 Watch the PowerShell window where the server is running. You'll see:
 
 ```
-📞 Emergency alert received! { patientPhone: '+919482936725', ... }
+📞 Emergency alert received! { patientPhone: '+1234567890', ... }
 📞 Calling 2 contacts...
-  ☎️  Calling Ambulance 1: +919740417391
-  ❌ Error contacting Ambulance 1: The number +919740417391 is unverified
-  ☎️  Calling Hospital 1: +919482936725
+  ☎️  Calling Ambulance 1: +9876543210
+  ❌ Error contacting Ambulance 1: The number +9876543210 is unverified
+  ☎️  Calling Hospital 1: +1234567890
   ✅ Call SID: CA1753b57bc46b10e88ad5a16725fcd77f
   ✅ SMS SID: SM46ca0aea63393c2a5d041ca0e6805ea4
 ```
@@ -269,7 +269,7 @@ Before testing:
 
 - [ ] Twilio server is running (`npm start`)
 - [ ] Android app is installed on device
-- [ ] Hospital number is verified (or already was): `+919482936725`
+- [ ] Hospital number is verified (or already was): `+1234567890`
 - [ ] Ambulance numbers verified (if you want them to work)
 - [ ] Location permission granted to app
 - [ ] Server logs visible in PowerShell
@@ -307,6 +307,6 @@ When everything works, you should see:
 
 **🚨 EMERGENCY SYSTEM READY! 🚨**
 
-Your phone (`+919482936725`) should have already received a test call!
+Your phone (`+HOSPITAL_PHONE_NUMBER_PLACEHOLDER`) should have already received a test call!
 
 Just press that emergency button! 📞🚑

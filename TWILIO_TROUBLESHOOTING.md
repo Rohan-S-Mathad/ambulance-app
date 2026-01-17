@@ -34,12 +34,12 @@ Open `twilio-sms/.env` and update with YOUR credentials:
 # Get these from Twilio Console
 TWILIO_ACCOUNT_SID=AC12345678901234567890123456789012  # ← Starts with AC
 TWILIO_AUTH_TOKEN=your_32_character_auth_token_here
-TWILIO_PHONE_NUMBER=+18585332666                       # ← NO spaces
+TWILIO_PHONE_NUMBER=+YOUR_TWILIO_PHONE_NUMBER                       # ← NO spaces
 
 # Phone numbers to call (must be verified if trial account)
-AMBULANCE_1_PHONE=+919876543210
-AMBULANCE_2_PHONE=+919876543211
-HOSPITAL_1_PHONE=+918765432109
+AMBULANCE_1_PHONE=+YOUR_AMBULANCE_PHONE_NUMBER
+AMBULANCE_2_PHONE=+YOUR_AMBULANCE_PHONE_NUMBER
+HOSPITAL_1_PHONE=+YOUR_HOSPITAL_PHONE_NUMBER
 ```
 
 ---
@@ -48,12 +48,12 @@ HOSPITAL_1_PHONE=+918765432109
 
 Twilio **trial accounts** can ONLY call **verified numbers**.
 
-#### **To verify a phone number:**
+#### **To verify a number:**
 
 1. Go
    to: [https://console.twilio.com/us1/develop/phone-numbers/manage/verified](https://console.twilio.com/us1/develop/phone-numbers/manage/verified)
 2. Click **"+ Add a new number"**
-3. Enter the phone number (e.g., `+919876543210`)
+3. Enter the phone number (e.g., `+YOUR_AMBULANCE_PHONE_NUMBER`)
 4. Verify with SMS code
 5. Repeat for all ambulance/hospital numbers
 
@@ -101,7 +101,7 @@ Your Android app needs to call the server. For now, let's test if the server wor
 Open a **new terminal** and run:
 
 ```powershell
-curl -X POST http://localhost:3000/emergency/trigger -H "Content-Type: application/json" -d '{\"patientPhone\":\"+919876543210\",\"patientName\":\"Test Patient\",\"latitude\":12.9716,\"longitude\":77.5946,\"address\":\"Test Location\"}'
+curl -X POST http://localhost:3000/emergency/trigger -H "Content-Type: application/json" -d '{\"patientPhone\":\"+YOUR_TEST_PHONE_NUMBER\",\"patientName\":\"Test Patient\",\"latitude\":12.9716,\"longitude\":77.5946,\"address\":\"Test Location\"}'
 ```
 
 ### **Option B: Test with Postman**
@@ -113,7 +113,7 @@ curl -X POST http://localhost:3000/emergency/trigger -H "Content-Type: applicati
 
 ```json
 {
-  "patientPhone": "+919876543210",
+  "patientPhone": "+YOUR_TEST_PHONE_NUMBER",
   "patientName": "Test Patient",
   "latitude": 12.9716,
   "longitude": 77.5946,
@@ -174,7 +174,7 @@ Error: 21606 - Invalid From Phone Number
 
 **Fix:**
 
-- Remove spaces: `+1 858 533 2666` → `+18585332666`
+- Remove spaces: `+YOUR_TWILIO_PHONE_NUMBER` → `+YOUR_TWILIO_PHONE_NUMBER`
 - Must start with `+` and country code
 - Must be a number you own in Twilio
 
@@ -299,7 +299,7 @@ Only after above tests pass, try from Android app.
 When you press emergency button, check the terminal where server is running. You should see:
 
 ```
-📞 Making emergency call to +919876543210
+📞 Making emergency call to +YOUR_AMBULANCE_PHONE_NUMBER
 ✅ Call initiated: CAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
@@ -316,7 +316,7 @@ In Android Studio → Logcat, filter by "Emergency" or "Twilio". Share any error
 Run this from command line (server must be running):
 
 ```powershell
-curl -X POST http://localhost:3000/call/make -H "Content-Type: application/json" -d '{\"to\":\"+919876543210\",\"message\":\"This is a test call from Twilio\"}'
+curl -X POST http://localhost:3000/call/make -H "Content-Type: application/json" -d '{\"to\":\"+YOUR_AMBULANCE_PHONE_NUMBER\",\"message\":\"This is a test call from Twilio\"}'
 ```
 
 If this works, your setup is correct!

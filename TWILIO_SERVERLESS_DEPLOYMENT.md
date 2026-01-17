@@ -47,8 +47,8 @@ twilio login
 
 You'll be prompted to enter:
 
-- **Account SID:** `AC93c01dd30d2d03abb133b938e6e16e79`
-- **Auth Token:** `ab5e0817d82cbad57d5724acb7fdfd67`
+- **Account SID:** YOUR_TWILIO_ACCOUNT_SID
+- **Auth Token:** YOUR_TWILIO_AUTH_TOKEN
 
 ---
 
@@ -118,10 +118,10 @@ private const val BASE_URL = "https://ambulance-emergency-system-XXXX-dev.twil.i
 Your phone numbers are already configured in `twilio-serverless/.env`:
 
 ```env
-TWILIO_PHONE_NUMBER=+18585332666
-AMBULANCE_1_PHONE=+919740417391
-AMBULANCE_2_PHONE=+919740417391
-HOSPITAL_1_PHONE=+919482936725
+TWILIO_PHONE_NUMBER=YOUR_TWILIO_PHONE_NUMBER
+AMBULANCE_1_PHONE=YOUR_AMBULANCE_1_PHONE
+AMBULANCE_2_PHONE=YOUR_AMBULANCE_2_PHONE
+HOSPITAL_1_PHONE=YOUR_HOSPITAL_1_PHONE
 ```
 
 These are automatically uploaded to Twilio when you deploy!
@@ -136,7 +136,7 @@ Test directly from PowerShell:
 $url = " http://localhost:3000/private-message"  # Replace with your URL
 
 $body = @{
-    patientPhone = "+919482936725"
+    patientPhone = "YOUR_PATIENT_PHONE"
     patientName = "Test Patient"
     latitude = 12.9716
     longitude = 77.5946
@@ -157,7 +157,7 @@ Invoke-RestMethod -Method Post -Uri $url -Body $body -ContentType "application/j
   "results": [
     {
       "contact": "Ambulance 1",
-      "phone": "+919740417391",
+      "phone": "YOUR_AMBULANCE_1_PHONE",
       "callSid": "CAxxxx",
       "smsSid": "SMxxxx",
       "status": "success"
@@ -377,14 +377,14 @@ When you make changes to the function:
 
 ### Phone Numbers (from .env)
 
-- **Twilio Number:** +18585332666
-- **Ambulance 1:** +919740417391
-- **Ambulance 2:** +919740417391
-- **Hospital 1:** +919482936725
+- **Twilio Number:** YOUR_TWILIO_PHONE_NUMBER
+- **Ambulance 1:** YOUR_AMBULANCE_1_PHONE
+- **Ambulance 2:** YOUR_AMBULANCE_2_PHONE
+- **Hospital 1:** YOUR_HOSPITAL_1_PHONE
 
 ### Twilio Account
 
-- **Account SID:** AC93c01dd30d2d03abb133b938e6e16e79
+- **Account SID:** YOUR_TWILIO_ACCOUNT_SID
 
 ---
 

@@ -17,3 +17,8 @@ local.properties
 .kotlin/
 *.log
 .env
+.idea/
+.kotlin/
+.env
+*.env
+twilio-serverless/.env
