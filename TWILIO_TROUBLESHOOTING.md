@@ -32,7 +32,7 @@ Open `twilio-sms/.env` and update with YOUR credentials:
 
 ```env
 # Get these from Twilio Console
-TWILIO_ACCOUNT_SID=AC12345678901234567890123456789012  # ← Starts with AC
+TWILIO_ACCOUNT_SID=*******************************  # ← Starts with AC
 TWILIO_AUTH_TOKEN=your_32_character_auth_token_here
 TWILIO_PHONE_NUMBER=+YOUR_TWILIO_PHONE_NUMBER                       # ← NO spaces
 
