@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Ambulance Body (White) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,45 L73,45 L73,65 L35,65 Z" />
+
+    <!-- Ambulance Cab -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,40 L48,40 L48,45 L35,45 Z" />
+
+    <!-- Ambulance Back Box -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,35 L73,35 L73,45 L48,45 Z" />
+
+    <!-- Medical Cross (Red on white background) -->
+    <!-- Vertical bar of cross -->
+    <path
+        android:fillColor="#FF1744"
+        android:pathData="M56,42 L60,42 L60,58 L56,58 Z" />
+
+    <!-- Horizontal bar of cross -->
+    <path
+        android:fillColor="#FF1744"
+        android:pathData="M52,49 L64,49 L64,53 L52,53 Z" />
+
+    <!-- Ambulance Windows -->
+    <path
+        android:fillColor="#C2185B"
+        android:pathData="M37,41 L45,41 L45,44 L37,44 Z" />
+
+    <!-- Ambulance Light -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M50,37 L54,37 L54,40 L50,40 Z" />
+
+    <!-- Wheel 1 -->
+    <path
+        android:fillColor="#424242"
+        android:pathData="M40,65 a5,5 0 1,1 0,10 a5,5 0 1,1 0,-10" />
+
+    <!-- Wheel 2 -->
+    <path
+        android:fillColor="#424242"
+        android:pathData="M65,65 a5,5 0 1,1 0,10 a5,5 0 1,1 0,-10" />
+
+    <!-- Wheel centers (white) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,68 a2,2 0 1,1 0,4 a2,2 0 1,1 0,-4" />
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M65,68 a2,2 0 1,1 0,4 a2,2 0 1,1 0,-4" />
+</vector>

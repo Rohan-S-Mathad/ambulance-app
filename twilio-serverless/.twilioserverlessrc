@@ -1,0 +1,14 @@
+{
+  "serviceName": "ambulance-emergency-system",
+  "functions": {
+    "emergency-alert": {
+      "path": "/emergency-alert"
+    }
+  },
+  "env": {
+    "TWILIO_PHONE_NUMBER": null,
+    "AMBULANCE_1_PHONE": null,
+    "AMBULANCE_2_PHONE": null,
+    "HOSPITAL_1_PHONE": null
+  }
+}

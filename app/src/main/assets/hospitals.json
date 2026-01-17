@@ -1,0 +1,100 @@
+[
+  {
+    "hospId": "hospital_001",
+    "name": "City General Hospital",
+    "address": "123 Main Street, City Center",
+    "lat": 12.9750,
+    "lon": 77.5950,
+    "status": "available",
+    "phoneNumber": "+91-080-12345678",
+    "emergencyNumber": "108",
+    "totalBeds": 200,
+    "availableBeds": 45,
+    "specialties": [
+      "Emergency",
+      "Trauma",
+      "Cardiology",
+      "Neurology"
+    ],
+    "hasICU": true,
+    "hasEmergencyRoom": true
+  },
+  {
+    "hospId": "hospital_002",
+    "name": "Central Medical Center",
+    "address": "456 Hospital Road, Downtown",
+    "lat": 12.9850,
+    "lon": 77.6050,
+    "status": "available",
+    "phoneNumber": "+91-080-23456789",
+    "emergencyNumber": "108",
+    "totalBeds": 150,
+    "availableBeds": 32,
+    "specialties": [
+      "Emergency",
+      "Pediatrics",
+      "Orthopedics"
+    ],
+    "hasICU": true,
+    "hasEmergencyRoom": true
+  },
+  {
+    "hospId": "hospital_003",
+    "name": "Emergency Care Hospital",
+    "address": "789 Care Avenue, North Zone",
+    "lat": 13.0050,
+    "lon": 77.6150,
+    "status": "available",
+    "phoneNumber": "+91-080-34567890",
+    "emergencyNumber": "108",
+    "totalBeds": 100,
+    "availableBeds": 28,
+    "specialties": [
+      "Emergency",
+      "General Surgery",
+      "Critical Care"
+    ],
+    "hasICU": true,
+    "hasEmergencyRoom": true
+  },
+  {
+    "hospId": "hospital_004",
+    "name": "East District Medical Center",
+    "address": "321 Health Street, East District",
+    "lat": 12.9950,
+    "lon": 77.6250,
+    "status": "available",
+    "phoneNumber": "+91-080-45678901",
+    "emergencyNumber": "108",
+    "totalBeds": 180,
+    "availableBeds": 52,
+    "specialties": [
+      "Emergency",
+      "Cardiology",
+      "Neurosurgery",
+      "Trauma"
+    ],
+    "hasICU": true,
+    "hasEmergencyRoom": true
+  },
+  {
+    "hospId": "hospital_005",
+    "name": "West Zone Specialty Hospital",
+    "address": "654 Medical Boulevard, West Zone",
+    "lat": 12.9650,
+    "lon": 77.5850,
+    "status": "available",
+    "phoneNumber": "+91-080-56789012",
+    "emergencyNumber": "108",
+    "totalBeds": 220,
+    "availableBeds": 67,
+    "specialties": [
+      "Emergency",
+      "Trauma",
+      "Burns",
+      "Intensive Care"
+    ],
+    "hasICU": true,
+    "hasEmergencyRoom": true
+  }
+]

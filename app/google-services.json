@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1096358080826",
+    "project_id": "ambulance-ad8fa",
+    "storage_bucket": "ambulance-ad8fa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1096358080826:android:9358bad80d3f06cc02e003",
+        "android_client_info": {
+          "package_name": "com.example.ambulance"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0en4Un_lJzitIwv94cN1VGKnTDSinH8Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

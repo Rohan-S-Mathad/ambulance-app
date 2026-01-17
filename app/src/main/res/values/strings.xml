@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Smart Ambulance</string>
+    <string name="app_tagline">Emergency Dispatch System</string>
+    <string name="app_motto">Quick. Reliable. Life-saving.</string>
+</resources>
