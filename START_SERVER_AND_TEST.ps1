@@ -67,7 +67,7 @@ if ($test -eq "y" -or $test -eq "Y") {
     Write-Host "🚨 Triggering emergency call..." -ForegroundColor Red
     
     $body = @{
-        patientPhone = "+919482936725"
+        patientPhone = "PATIENT PHONE NUMBER "
         patientName = "Test Patient"
         latitude = 12.9716
         longitude = 77.5946
